@@ -1,5 +1,5 @@
 from sentence_transformers import SentenceTransformer
-import pinecone
+import pinecone-client
 import openai
 import streamlit as st
 openai.api_key = "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"
