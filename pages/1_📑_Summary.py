@@ -14,7 +14,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains.summarize import load_summarize_chain
 
 def generate_response(txt):
-    openai_api_key="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"
+    openai_api_key="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"
     llm = OpenAI(temperature=0, openai_api_key=openai_api_key)
     text_splitter = CharacterTextSplitter()
     texts = text_splitter.split_text(txt)
