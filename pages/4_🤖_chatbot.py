@@ -3,7 +3,7 @@ import pinecone
 import openai
 import streamlit as st
 import os
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 pinecone.init(api_key='b43bdbde-954e-4caf-9aa7-6d6dd28b9f3f', environment='gcp-starter')
@@ -53,7 +53,7 @@ if 'responses' not in st.session_state:
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=open.api_key)
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=open_api_key)
 
 if 'buffer_memory' not in st.session_state:
             st.session_state.buffer_memory=ConversationBufferWindowMemory(k=3,return_messages=True)
