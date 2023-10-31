@@ -1,9 +1,10 @@
 import streamlit as st
 #from api_key import apikey
 from langchain import OpenAI
+import os
 
 def analyze_sentiment(text):
-	openai_api_key="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"
+	openai_api_key=os.environ["OPENAI_API_KEY"]
 	llm = OpenAI(temperature=0, openai_api_key=openai_api_key)
 	response=llm(f'This is a sentiment analysis request. Can you tell me the sentiment of the following text? Be elaborate.\n"{text}"\nSentiment: {{sentiment}}')
 	return response
