@@ -2,7 +2,7 @@ import streamlit as st
 from langchain import OpenAI
 
 def translate(text):
-	openai_api_key="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"
+	openai_api_key="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"
 	llm = OpenAI(temperature=0, openai_api_key=openai_api_key)
 	response=llm(f'This is a text generation request. Can you generate a few lines for the following prompt: \n"{text}"\nGenerated Text: {{generated}}')
 	return response
