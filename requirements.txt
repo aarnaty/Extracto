@@ -5,4 +5,3 @@ langchain
 sentence_transformers
 streamlit-chat
 utils
-os
