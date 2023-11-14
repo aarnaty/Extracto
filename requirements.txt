@@ -1,5 +1,5 @@
 pinecone-client
-openai
+openai=0.28
 streamlit
 langchain
 sentence_transformers
